@@ -5,6 +5,7 @@ import ColumnView from './components/ColumnView';
 import ListView from './components/ListView';
 import { context } from './context/MyContext';
 
+
 const App = () => {  
 
   let {isModelOpen, isListView} = useContext(context)
