@@ -1,13 +1,13 @@
 import { useContext } from 'react'
-import { context } from './context/myContext';
 import Model from './components/Model'
 import Navbar from './components/Navbar';
 import ColumnView from './components/ColumnView';
 import ListView from './components/ListView';
+import { context } from './context/myContext';
 
 const App = () => {  
 
-  let {isModelOpen, filter, search, isListView} = useContext(context)
+  let {isModelOpen, isListView} = useContext(context)
 
   return (
     <main className='h-screen relative'>
