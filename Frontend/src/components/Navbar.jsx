@@ -4,7 +4,7 @@ import Toggle from './Toggle'
 
 const Navbar = () => {
 
-    const {setIsModelOpen, setSearch, setFilter, filter} = useContext(context)
+    const {setIsModelOpen, setSearch, setFilter, filter, priority, setPriority} = useContext(context)
 
   return (
         <nav className='p-4 flex flex-col items-center justify-center gap-4'>
@@ -13,11 +13,15 @@ const Navbar = () => {
             <div className='flex items-center justify-center'>
               <input onChange={(e)=>setSearch(e.target.value)} type="text" placeholder='Search Task' className='w-70 border px-4 py-1 rounded-2xl'/>
             </div>
-            <div className='flex gap-2 h-fit'>
-              <span onClick={()=>setFilter("all")} className={`cursor-pointer rounded-2xl ${filter && filter=="all" ? "bg-orange-900" : "bg-orange-500"} text-white text-sm px-2 py-1`}>All Tasks</span>
-              <span onClick={()=>setFilter("todo")} className={`cursor-pointer rounded-2xl ${filter && filter=="todo" ? "bg-orange-900" : "bg-orange-500"} text-white text-sm px-2 py-1`}>Todo Tasks</span>
-              <span onClick={()=>setFilter("progress")} className={`cursor-pointer rounded-2xl ${filter && filter=="progress" ? "bg-orange-900" : "bg-orange-500"} text-white text-sm px-2 py-1`}>In Progress Tasks</span>
-              <span onClick={()=>setFilter("completed")} className={`cursor-pointer rounded-2xl ${filter && filter=="completed" ? "bg-orange-900" : "bg-orange-500"} text-white text-sm px-2 py-1`}>Completed Tasks</span>
+            <div className='grid grid-cols-4 grid-rows-2 text-center gap-2 h-fit'>
+                <span onClick={()=>setFilter("all")} className={`cursor-pointer rounded-2xl ${filter && filter=="all" ? "bg-orange-900" : "bg-orange-500"} text-white text-sm px-2 py-1`}>All Tasks</span>
+                <span onClick={()=>setFilter("todo")} className={`cursor-pointer rounded-2xl ${filter && filter=="todo" ? "bg-orange-900" : "bg-orange-500"} text-white text-sm px-2 py-1`}>Todo Tasks</span>
+                <span onClick={()=>setFilter("progress")} className={`cursor-pointer rounded-2xl ${filter && filter=="progress" ? "bg-orange-900" : "bg-orange-500"} text-white text-sm px-2 py-1`}>In Progress Tasks</span>
+                <span onClick={()=>setFilter("completed")} className={`cursor-pointer rounded-2xl ${filter && filter=="completed" ? "bg-orange-900" : "bg-orange-500"} text-white text-sm px-2 py-1`}>Completed Tasks</span>
+                <span onClick={()=>setPriority("all")} className={`cursor-pointer rounded-2xl ${priority && priority=="all" ? "bg-orange-900" : "bg-orange-500"} text-white text-sm px-2 py-1`}>All Priority</span>
+                <span onClick={()=>setPriority("low")} className={`cursor-pointer rounded-2xl ${priority && priority=="low" ? "bg-orange-900" : "bg-orange-500"} text-white text-sm px-2 py-1`}>Low Priority</span>
+                <span onClick={()=>setPriority("moderate")} className={`cursor-pointer rounded-2xl ${priority && priority=="moderate" ? "bg-orange-900" : "bg-orange-500"} text-white text-sm px-2 py-1`}>Moderate Priority</span>
+                <span onClick={()=>setPriority("high")} className={`cursor-pointer rounded-2xl ${priority && priority=="high" ? "bg-orange-900" : "bg-orange-500"} text-white text-sm px-2 py-1`}>High Priority</span>
             </div>
             <div className='flex justify-end'>
               <button onClick={()=>setIsModelOpen(true)} className='w-fit px-4 py-2 bg-orange-500 text-white rounded-3xl cursor-pointer'>Add Task</button>
