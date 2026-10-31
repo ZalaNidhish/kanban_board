@@ -1,6 +1,5 @@
-import React, { useContext } from 'react'
-import { context } from '../context/myContext'
-import { LayoutGrid, List } from 'lucide-react'
+import { useContext } from 'react'
+import { context } from '../context/MyContext'
 import Toggle from './Toggle'
 
 const Navbar = () => {

@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { X, ChevronDown, Calendar, Type, FileText, AlertCircle } from 'lucide-react';
-import { context } from '../context/myContext';
+import { context } from '../context/MyContext';
 import { useTask } from '../hooks/TaskHook';
 
 const Model = () => {

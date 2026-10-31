@@ -1,5 +1,4 @@
-import React, { useContext, useState } from 'react'
-import { context } from '../context/myContext';
+import { useState } from 'react'
 import { useTask } from '../hooks/TaskHook';
 
 const TaskColumn = ({color, children, status}) => {

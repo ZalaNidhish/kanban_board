@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { context } from "../context/myContext"
+import { context } from "../context/MyContext"
 import { useTask } from "../hooks/TaskHook"
 
 const TaskCard = ({task, color="none"}) => {

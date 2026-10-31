@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { context } from '../context/myContext'
+import { context } from '../context/MyContext'
 import TaskCard from './TaskCard'
 
 const ListView = () => {

@@ -1,6 +1,6 @@
 import { LayoutGrid, List } from 'lucide-react'
 import { useContext } from 'react'
-import { context } from '../context/myContext'
+import { context } from '../context/MyContext'
 
 const Toggle = () => {
 

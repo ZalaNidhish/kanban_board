@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import {useForm} from 'react-hook-form'
-import { context } from '../context/myContext'
+import { context } from '../context/MyContext'
 
 export const useTask = ()=>{
     const {register, handleSubmit, formState:{errors}, reset} = useForm()

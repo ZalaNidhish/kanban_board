@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import TaskCard from './TaskCard'
 import TaskColumn from './TaskColumn'
-import { context } from '../context/myContext';
+import { context } from '../context/MyContext';
 
 const ColumnView = () => {
 
