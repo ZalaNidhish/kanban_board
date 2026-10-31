@@ -38,7 +38,7 @@ const TaskColumn = ({color, children, status}) => {
             ${isDragEnter 
             ? `border-dashed border-black scale-[1.01] transition-all` 
             : 'border-transparent' } 
-            w-full h-full rounded-lg p-4 flex flex-col gap-2 relative pt-10`
+            w-full h-96 md:h-full rounded-lg p-4 flex flex-col gap-2 relative pt-10`
         }
     >
         <div className={`text-center w-full text-white ${variants.bgSolid} absolute top-0 left-0 uppercase`}>{status}</div>

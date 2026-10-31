@@ -16,7 +16,7 @@ const ColumnView = () => {
   ];
 
   return (
-        <div className="grid_space h-full w-full flex gap-4 p-4">
+        <div className="grid_space h-full w-full flex flex-col md:flex-row gap-4 p-4">
           {
             columnsConfig.map(col=>{
                   return <TaskColumn key={col.status} color={col.color} status={col.status}>

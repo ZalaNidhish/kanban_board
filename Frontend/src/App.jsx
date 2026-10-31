@@ -11,7 +11,7 @@ const App = () => {
   let {isModelOpen, isListView} = useContext(context)
 
   return (
-    <main className='h-screen relative'>
+    <main className='min-h-screen md:h-screen relative'>
         {isModelOpen && <Model />}
         <Navbar />
 

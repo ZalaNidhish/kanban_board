@@ -12,7 +12,7 @@ const Model = () => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm p-4">
-      <div className="w-full max-w-md rounded-2xl border border-zinc-200 bg-white p-6 shadow-xl font-sans animate-in fade-in zoom-in-95 duration-200">
+      <div className="w-full max-w-md max-h-full overflow-y-auto rounded-2xl border border-zinc-200 bg-white p-4 sm:p-6 shadow-xl font-sans animate-in fade-in zoom-in-95 duration-200">
         
         {/* Header */}
         <div className="mb-5 flex items-center justify-between">
@@ -66,7 +66,7 @@ const Model = () => {
           </div>
           
           {/* Row Container for Details */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             
             {/* Priority Dropdown */}
             <div className="flex flex-col gap-1.5">
